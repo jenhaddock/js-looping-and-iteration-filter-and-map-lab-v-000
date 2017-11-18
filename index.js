@@ -6,11 +6,11 @@ function driversWithRevenueOver(array, revenue){
 }
 
 function driverNamesWithRevenueOver(array, revenue){
-  const newArr = map(driversWithRevenueOver(array, revenue), function (name) { return name});
+  
 }
 
-function exactMatch(array, revenue){
+function exactMatch(array, value){
   return array.filter(function(matchIt){
-    return matchIt.revenue === revenue
+    return matchIt.value === value
   })
 }
