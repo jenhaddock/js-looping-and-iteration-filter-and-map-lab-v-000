@@ -9,8 +9,13 @@ function driverNamesWithRevenueOver(array, revenue){
   return driversWithRevenueOver(array, revenue).map(driver => driver.name)
 }
 
-function exactMatch(array, value){
-  return array.filter(function(matchIt){
-    return matchIt.value === value
-  })
+function exactMatch(array, object){
+  return array.filter((driver) => {
+    for (const key in driver) {
+      if(driver[key] === object[key]){
+        return driver;
+      }
+    }
+  }
+)
 }
