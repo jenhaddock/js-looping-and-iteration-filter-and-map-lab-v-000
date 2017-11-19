@@ -6,7 +6,7 @@ function driversWithRevenueOver(array, revenue){
 }
 
 function driverNamesWithRevenueOver(array, revenue){
-  return driversWithRevenueOver(array, revenue).map(driver => driver.name)
+  return driversWithRevenueOver(array, revenue).map(driver => driver.name);
 }
 
 function exactMatch(array, object){
@@ -18,4 +18,8 @@ function exactMatch(array, object){
     }
   }
 )
+}
+
+function exactMatchToList(array, object){
+  return exactMatch(array, object).map(driver => driver.name);
 }
